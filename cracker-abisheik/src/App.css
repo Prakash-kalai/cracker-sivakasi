@@ -1,0 +1,797 @@
+/* ========== GLOBAL STYLES ========== */
+* {
+
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+/* Add a dark overlay behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(119, 116, 116, 0.45); /* Dark overlay */
+  z-index: -1;
+}
+
+body {
+  background-image: url("https://chatgpt.com/backend-api/estuary/content?id=file_0000000087c072098c911bffac45e7c3&ts=489774&p=fs&cid=1&sig=688e0516ed763929e1c4b7b4e47450ca40e44c09c5209de0adb48d79c5a09cc1&v=0");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #ffffff;      /* White text for visibility */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make navbar text visible */
+.navbar h1,
+.navbar p,
+.navbar button {
+  color: white;
+}
+
+/* Improve buttons */
+.navbar button {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 10px 18px;
+  margin: 5px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.navbar button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+/* Container styling */
+.home-container {
+  text-align: center;
+  margin-top: 80px;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  font-family: "Poppins", sans-serif; /* clean modern font */
+}
+
+/* Big Title */
+/* ----------------------------- */
+/* PAYMENT INFORMATION PAGE CSS  */
+/* ----------------------------- */
+
+.payment-section {
+  width: 100%;
+  min-height: 80vh;
+  background: #8e8e8e; 
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-title {
+  font-size: 46px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.payment-subtitle {
+  font-size: 20px;
+  color: white;
+  opacity: 0.95;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.payment-box {
+  width: 80%;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 20px;
+  border: 2px solid #e6e6e6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.payment-box p {
+  margin: 10px 0;
+}
+
+
+
+/* Offer text */
+.page-offer {
+  font-size: 26px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #005eff;
+  border: 2px solid #00aaff;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+/* Glow effect */
+@keyframes glow {
+  from { text-shadow: 0 0 8px #9e6af8; }
+  to { text-shadow: 0 0 16px #4f39f7; }
+}
+
+.page-desc {
+  font-size: 18px;
+  font-weight: 500;
+  color: white !important;        /* OPT/Orange color */
+  margin-top: 2px;      /* closer to navbar */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  letter-spacing: 2px;  /* spacing between letters */
+  animation: slideText 25s linear infinite; /* slower animation */
+  opacity: 0.95;
+  overflow: hidden;
+}
+
+@keyframes slideText {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.page-sub {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+/* Stylish CTA Button */
+.btn-primary {
+ background: linear-gradient(90deg, #3a0ca3, #4361ee);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+
+
+
+/* ========== NAVBAR ========== */
+
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  object-fit: cover;
+}
+
+.brand-text h1 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.brand-text p {
+  font-size: 0.9rem;
+  color: #ffe9d6;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin-left: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links button:hover {
+  color: #ffeb3b;
+  transform: scale(1.05);
+}
+
+/* ========== MAIN CONTENT AREA ========== */
+.main-area {
+  padding: 40px 10%;
+ 
+  text-align: center;
+}
+
+/* ========== PAGE HEADERS ========== */
+h2.page-title {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  padding: 10px 25px;
+  width: fit-content;
+  margin: 0 auto 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  color: white;
+}
+
+p.page-desc {
+  color: #358cea;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+/* ========== PRODUCT TABLE (Estimate / Price List) ========== */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* white table body */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed; /* ensures even column widths */
+}
+
+/* Header row */
+.product-table th {
+  background: linear-gradient(90deg, #3a0ca3, #4361ee); /* top blue gradient */
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-right: 1px solid #ffffff; /* vertical line between headers */
+}
+
+/* Highlight specific headers (Sparkler, Ground Chakra, etc.) */
+.product-table th.highlight {
+  background: #4361ee; /* brighter blue for highlight */
+  color: #fff;
+  box-shadow: 0 0 8px rgba(67,97,238,0.6);
+}
+
+/* Table cells */
+.product-table td {
+  padding: 12px;
+  border-bottom: 1px solid #000000; /* horizontal line */
+  border-right: 1px solid #000000; /* vertical line */
+  vertical-align: middle;
+  color: #000000;
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+/* Remove right border for last column */
+.product-table th:last-child,
+.product-table td:last-child {
+  border-right: none;
+}
+
+/* Even rows */
+.product-table tr:nth-child(even) {
+  background: #ffffff; /* keep white even rows */
+}
+
+/* Images */
+.product-table img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Inputs */
+.product-table input {
+  width: 60px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.product-table input:focus {
+  outline: none;
+  border-color: #4361ee; /* match theme */
+}
+/* Section header row inside table body */
+.product-table .section-header {
+  background: linear-gradient(90deg, #3a0ca3, #4361ee); /* same as table header */
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.product-table .section-header td {
+  border-right: 1px solid #ffffff; /* vertical lines */
+}
+
+/* Remove border for last cell */
+.product-table .section-header td:last-child {
+  border-right: none;
+}
+/* Subtotal column in product table */
+.product-table td.subtotal {
+  font-weight: 600;
+  color: #3a0ca3; /* deep blue to match table header */
+  text-align: center;
+  background-color: #e6e6ff; /* subtle highlight for subtotal */
+}
+
+/* Submit button below table */
+.product-table .submit-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #4361ee; /* match highlight color */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-table .submit-btn:hover {
+  background-color: #3a0ca3; /* darker blue on hover */
+}
+/* Fixed bottom bar */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 9999;
+}
+
+.bottom-bar div {
+  margin: 5px 10px;
+  font-size: 1.1rem;
+}
+
+.bottom-bar .total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.bottom-bar .actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #09418c;
+}
+
+.submit-btn {
+  background-color: #ff9800;
+}
+
+.submit-btn:hover {
+  background-color: #f57c00;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bottom-bar .actions {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+/* Add bottom padding so table is not hidden */
+.estimate-page {
+  padding-bottom: 140px; /* height of bottom bar + extra space */
+}
+
+/* Fixed bottom bar */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 9999;
+}
+
+.bottom-bar .totals span {
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.bottom-bar .total {
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.bottom-bar .actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #09418c;
+}
+
+.submit-btn {
+  background-color: #ff9800;
+}
+
+.submit-btn:hover {
+  background-color: #f57c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bottom-bar .actions {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .bottom-bar .totals span {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+/* ========================about us =================================== */
+/* ================= ABOUT PAGE ================= */
+
+/* Container for About page */
+.about-container {
+  max-width: 900px;              /* center content */
+  margin: 40px auto;             /* more space from top */
+  padding: 0 20px;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+/* About page title */
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1d61c1;               /* theme blue */
+  margin-bottom: 20px;
+  border-left: 6px solid #f8bc73;  /* accent line */
+  padding-left: 15px;
+  letter-spacing: 1px;
+}
+
+/* Short description */
+.about-desc {
+  font-size: 20px;
+  color: black;               /* OPT / orange color */
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Detailed text */
+.about-text {
+  font-size: 18px;
+  color: black;
+  line-height: 1.9;
+}
+/* ==============================contact us================================================= */
+/* ================= CONTACT PAGE ================= */
+
+.contact-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #007bff, #085166);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.contact-desc {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: #1173c3; /* dark red */
+  color: #fff;
+  padding: 14px 0;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #8adaf9;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  /* box-shadow: 0 4px 12px rgba(238, 236, 236, 0.3); */
+}
+
+.whatsapp-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==================================price list=============================================== */
+/* App.css */
+
+/* General page styling for PriceList */
+.pricelist-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #222;
+  text-align: center;
+}
+
+.pricelist-page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #0d47a1; /* deep blue main heading */
+}
+
+.pricelist-page p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Category block */
+.category-block {
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-block h3 {
+  font-size: 1.5rem;
+  color: #0d47a1; /* category heading in blue */
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Price table styling */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.price-table th,
+.price-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.price-table th {
+  background-color: #0d47a1; /* header blue */
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.price-table tr:hover {
+  background-color: #e3f2fd; /* subtle hover effect */
+}
+
+.price-table td {
+  color: #333;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .pricelist-page h2 {
+    font-size: 2rem;
+  }
+  .category-block h3 {
+    font-size: 1.3rem;
+  }
+  .price-table th,
+  .price-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+/* ========== BUTTONS ========== */
+.btn {
+ 
+  color: white;
+  border: none;
+  margin: 5px;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e03e00;
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background: linear-gradient(90deg, #3a0ca3, #4361ee);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+}
+
+.site-footer div {
+  margin: 4px 0;
+}
+
+.site-footer span {
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links button {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .brand-text h1 {
+    font-size: 1.1rem;
+  }
+
+  .main-area {
+    padding: 20px;
+  }
+
+  .product-table img {
+    width: 60px;
+    height: 60px;
+  }
+}

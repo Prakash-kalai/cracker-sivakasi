@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f8f8f8;
+}
+
+/* Sidebar */
+.sidebar {
+  
+  color: black;
+  position: fixed;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 0;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Main Dashboard */
+.dashboard-container {
+  display: flex;
+}
+
+.dashboard-content {
+  margin-left: 240px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Stat Cards */
+.stats-row {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ddd;
+}
+
+/* Table */
+.cracker-table {
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.cracker-table th, .cracker-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.cracker-table th {
+  background: #e2e8f0;
+}
