@@ -4,6 +4,7 @@ import SignIn from "./authentication/Signin";
 import Main from "./components/Main";
 import { Routes, Route, Navigate } from "react-router-dom";
 
+
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [user, setUser] = useState(null);
@@ -54,6 +55,7 @@ function App() {
 
             {/* If logged in and user visits /signin → redirect */}
             <Route path="/signin" element={<Navigate to="/" />} />
+            
           </Routes>
         </>
       )}
